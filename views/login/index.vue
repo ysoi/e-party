@@ -51,7 +51,9 @@ export default {
                 if(res.code==1){
                   MessageBox.alert(res.msg);
                   this.$store.commit('isLogin',res.token);
+                //   this.$store.commit('changePwd',this.formData.password);
                   this.$router.push('/userInfo');
+                //   console.log(this.$store.state.password);
                  
                   
                   

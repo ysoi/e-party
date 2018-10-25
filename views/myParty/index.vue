@@ -24,7 +24,7 @@
                <img src="@/public/imgs/icon/user2.png" alt="">
                <div>个人量化积分</div>
              </div>
-             <router-link class="info-right" to="/userInfo">
+             <router-link class="info-right" to="/userInt">
                  <img src="@/public/imgs/icon/userRight.png" alt=""> 
              </router-link>
           </div>
@@ -33,7 +33,7 @@
                <img src="@/public/imgs/icon/user3.png" alt="">
                <div>修改密码</div>
              </div>
-             <router-link class="info-right" to="/login">
+             <router-link class="info-right" to="/changeSecret">
                  <img src="@/public/imgs/icon/userRight.png" alt=""> 
              </router-link>
           </div>
@@ -42,12 +42,12 @@
                 <img src="@/public/imgs/icon/user4.png" alt="" >
                 <div>党费缴纳</div>
               </div>
-              <router-link class="info-right" to="/login" >
+              <router-link class="info-right" to="/payFee" >
                 <img src="@/public/imgs/icon/userRight.png" alt="">
               </router-link>
           </div>     
         </div>
-        <mt-button type="danger" size="large" class="button" v-if="isLogin">退出登录</mt-button>
+        <mt-button type="danger" size="large" class="button" v-if="isLogin" @click="loginOut">退出登录</mt-button>
       <TabBar></TabBar>
     </div>
 </template>
@@ -90,6 +90,10 @@
                         this.isLogin=true;
                     }
                 })
+            },
+            loginOut(){
+                this.$store.commit('isLogin','');
+                this.$router.push('/login');
             }
           
         }

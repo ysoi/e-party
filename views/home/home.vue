@@ -37,7 +37,7 @@
                     </router-link>
                 </div>
                 <div>
-                    <router-link to="/login">
+                    <router-link to="/cloudInteract">
                         <div  class="item">
                             <img src="@/public/imgs/choose/03.png" alt="">
                             <span>党员云互动</span>

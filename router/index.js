@@ -84,6 +84,7 @@ export default new Router({
       name:'myParty',
       component:MyParty
     },
+    //党史今天
     {
       path:'/mapToday',
       name:'mapToday',
@@ -105,6 +106,37 @@ export default new Router({
       path:'/userInt',
       name:'userInt',
       component:()=>import("@/views/userInt/index")
+    },
+    //积分明细
+    {
+      path:'/intDet',
+      name:'intDet',
+      component:()=>import("@/views/intDetail/index")
+    },
+    //修改密码
+    {
+      path:'/changeSecret',
+      name:'changeSecret',
+      component:()=>import("@/views/changeSecret/index")
+    },
+    //党费缴纳
+    {
+      path:'/payFee',
+      name:'payFee',
+      component:()=>import("@/views/payFee/index")
+    },
+   
+    //党员云互动
+    {
+      path:'/cloudInteract',
+      name:'cloudInteract',
+      component:()=>import("@/views/cloudInteract/index")
+    },
+    //针对某主题评论
+    {
+      path:'/content',
+      name:'content',
+      component:()=>import("@/views/content/index")
     },
   ]
 })
